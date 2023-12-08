@@ -568,6 +568,7 @@ static Triple::ArchType parseArch(StringRef ArchName) {
     .Case("loongarch32", Triple::loongarch32)
     .Case("loongarch64", Triple::loongarch64)
     .Case("dxil", Triple::dxil)
+    .Case("dmg", Triple::dmg)
     .Case("xtensa", Triple::xtensa)
     .Default(Triple::UnknownArch);
 
@@ -845,6 +846,7 @@ static Triple::ObjectFormatType getDefaultFormat(const Triple &T) {
   case Triple::bpfeb:
   case Triple::bpfel:
   case Triple::csky:
+  case Triple::dmg:
   case Triple::hexagon:
   case Triple::hsail64:
   case Triple::hsail:
@@ -1397,6 +1399,7 @@ static unsigned getArchPointerBitWidth(llvm::Triple::ArchType Arch) {
     return 0;
 
   case llvm::Triple::avr:
+  case llvm::Triple::dmg:
   case llvm::Triple::msp430:
     return 16;
 
@@ -1484,6 +1487,7 @@ Triple Triple::get32BitArchVariant() const {
   case Triple::UnknownArch:
   case Triple::amdgcn:
   case Triple::avr:
+  case Triple::dmg:
   case Triple::bpfeb:
   case Triple::bpfel:
   case Triple::msp430:
@@ -1566,6 +1570,7 @@ Triple Triple::get64BitArchVariant() const {
   case Triple::arc:
   case Triple::avr:
   case Triple::csky:
+  case Triple::dmg:
   case Triple::dxil:
   case Triple::hexagon:
   case Triple::kalimba:
