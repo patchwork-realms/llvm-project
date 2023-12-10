@@ -444,6 +444,9 @@ std::unique_ptr<TargetCodeGenInfo>
 createWindowsARMTargetCodeGenInfo(CodeGenModule &CGM, ARMABIKind K);
 
 std::unique_ptr<TargetCodeGenInfo>
+createDMGTargetCodeGenInfo(CodeGenModule &CGM, unsigned NPR, unsigned NRR);
+
+std::unique_ptr<TargetCodeGenInfo>
 createAVRTargetCodeGenInfo(CodeGenModule &CGM, unsigned NPR, unsigned NRR);
 
 std::unique_ptr<TargetCodeGenInfo>

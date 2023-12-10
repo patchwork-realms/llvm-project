@@ -98,6 +98,7 @@ add_clang_library(clangBasic
   Targets/AVR.cpp
   Targets/BPF.cpp
   Targets/CSKY.cpp
+  Targets/DMG.cpp
   Targets/DirectX.cpp
   Targets/Hexagon.cpp
   Targets/Lanai.cpp

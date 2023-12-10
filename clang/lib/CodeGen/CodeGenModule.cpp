@@ -135,6 +135,12 @@ createTargetCodeGenInfo(CodeGenModule &CGM) {
     return createAVRTargetCodeGenInfo(CGM, NPR, NRR);
   }
 
+  case llvm::Triple::dmg: {
+    unsigned NRR = 4;
+    unsigned NPR = 4;
+    return createDMGTargetCodeGenInfo(CGM, NPR, NRR);
+  }
+
   case llvm::Triple::aarch64:
   case llvm::Triple::aarch64_32:
   case llvm::Triple::aarch64_be: {

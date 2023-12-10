@@ -118,6 +118,7 @@ add_clang_library(clangCodeGen
   Targets/ARC.cpp
   Targets/ARM.cpp
   Targets/AVR.cpp
+  Targets/DMG.cpp
   Targets/BPF.cpp
   Targets/CSKY.cpp
   Targets/Hexagon.cpp

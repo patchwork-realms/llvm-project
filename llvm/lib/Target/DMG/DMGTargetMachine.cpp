@@ -33,6 +33,22 @@ DMGTargetMachine::DMGTargetMachine(const Target &T, const Triple &TT,
 
 DMGTargetMachine::~DMGTargetMachine() = default;
 
+// TODO: Add required passes!
+bool DMGTargetMachine::addPassesToEmitFile(PassManagerBase &PM, raw_pwrite_stream &Out,
+                                           raw_pwrite_stream *DwoOut, CodeGenFileType FileType,
+                                           bool DisableVerify,
+                                           MachineModuleInfoWrapperPass *MMIWP) {
+assert(true && "Pass to emit file from clang not present!");
+return false;
+}
+
+// TODO: Add required passes!
+bool DMGTargetMachine::addPassesToEmitMC(PassManagerBase &PM, MCContext *&Ctx,
+                                         raw_pwrite_stream &Out, bool DisableVerify) {
+assert(true && "Pass to emit MC from clang not present!");
+return false;
+}
+
 namespace {
 
 /// DMG Code Generator Pass Configuration Options

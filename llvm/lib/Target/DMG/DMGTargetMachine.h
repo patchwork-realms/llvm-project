@@ -26,6 +26,14 @@ public:
         return &Subtarget; 
     }
 
+    bool addPassesToEmitFile(PassManagerBase &PM, raw_pwrite_stream &Out,
+                           raw_pwrite_stream *DwoOut, CodeGenFileType FileType,
+                           bool DisableVerify,
+                           MachineModuleInfoWrapperPass *MMIWP) override;
+
+    bool addPassesToEmitMC(PassManagerBase &PM, MCContext *&Ctx,
+                            raw_pwrite_stream &Out, bool DisableVerify) override;
+
     // Pass Pipeline Configuration
     TargetPassConfig *createPassConfig(PassManagerBase &PM) override;
 

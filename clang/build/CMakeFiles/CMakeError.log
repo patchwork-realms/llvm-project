@@ -1,0 +1,73 @@
+Performing C SOURCE FILE Test C_SUPPORTS_FNO_SEMANTIC_INTERPOSITION failed with the following output:
+Change Dir: /Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/ninja cmTC_e5706 && [1/2] Building C object CMakeFiles/cmTC_e5706.dir/src.c.o
+FAILED: CMakeFiles/cmTC_e5706.dir/src.c.o 
+/opt/homebrew/opt/llvm/bin/clang -DC_SUPPORTS_FNO_SEMANTIC_INTERPOSITION  -fPIC  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk   -Werror -fno-semantic-interposition -MD -MT CMakeFiles/cmTC_e5706.dir/src.c.o -MF CMakeFiles/cmTC_e5706.dir/src.c.o.d -o CMakeFiles/cmTC_e5706.dir/src.c.o -c /Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp/src.c
+clang: error: argument unused during compilation: '-fno-semantic-interposition' [-Werror,-Wunused-command-line-argument]
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C++ SOURCE FILE Test CXX_SUPPORTS_FNO_SEMANTIC_INTERPOSITION failed with the following output:
+Change Dir: /Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/ninja cmTC_73eb3 && [1/2] Building CXX object CMakeFiles/cmTC_73eb3.dir/src.cxx.o
+FAILED: CMakeFiles/cmTC_73eb3.dir/src.cxx.o 
+/opt/homebrew/opt/llvm/bin/clang++ -DCXX_SUPPORTS_FNO_SEMANTIC_INTERPOSITION  -fPIC  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk   -Werror -fno-semantic-interposition -std=c++17 -MD -MT CMakeFiles/cmTC_73eb3.dir/src.cxx.o -MF CMakeFiles/cmTC_73eb3.dir/src.cxx.o.d -o CMakeFiles/cmTC_73eb3.dir/src.cxx.o -c /Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp/src.cxx
+clang++: error: argument unused during compilation: '-fno-semantic-interposition' [-Werror,-Wunused-command-line-argument]
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+int main() { return 0; }
+Performing C SOURCE FILE Test C_SUPPORTS_CMAKE_CXX_FLAGS failed with the following output:
+Change Dir: /Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/ninja cmTC_1f0f3 && [1/2] Building C object CMakeFiles/cmTC_1f0f3.dir/src.c.o
+FAILED: CMakeFiles/cmTC_1f0f3.dir/src.c.o 
+/opt/homebrew/opt/llvm/bin/clang -DC_SUPPORTS_CMAKE_CXX_FLAGS  -fPIC -Werror=date-time -Werror=unguarded-availability-new  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk   -Werror -fno-lifetime-dse -MD -MT CMakeFiles/cmTC_1f0f3.dir/src.c.o -MF CMakeFiles/cmTC_1f0f3.dir/src.c.o.d -o CMakeFiles/cmTC_1f0f3.dir/src.c.o -c /Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp/src.c
+clang: error: unknown argument: '-fno-lifetime-dse'
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C++ SOURCE FILE Test CXX_SUPPORTS_CMAKE_CXX_FLAGS failed with the following output:
+Change Dir: /Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/ninja cmTC_1f586 && [1/2] Building CXX object CMakeFiles/cmTC_1f586.dir/src.cxx.o
+FAILED: CMakeFiles/cmTC_1f586.dir/src.cxx.o 
+/opt/homebrew/opt/llvm/bin/clang++ -DCXX_SUPPORTS_CMAKE_CXX_FLAGS  -fPIC -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk   -Werror -fno-lifetime-dse -std=c++17 -MD -MT CMakeFiles/cmTC_1f586.dir/src.cxx.o -MF CMakeFiles/cmTC_1f586.dir/src.cxx.o.d -o CMakeFiles/cmTC_1f586.dir/src.cxx.o -c /Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp/src.cxx
+clang++: error: unknown argument: '-fno-lifetime-dse'
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test CXX_SUPPORTS_CLASS_MEMACCESS_FLAG failed with the following output:
+Change Dir: /Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/ninja cmTC_d996a && [1/2] Building CXX object CMakeFiles/cmTC_d996a.dir/src.cxx.o
+warning: unknown warning option '-Wclass-memaccess'; did you mean '-Wclass-varargs'? [-Wunknown-warning-option]
+1 warning generated.
+[2/2] Linking CXX executable cmTC_d996a
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test LINKER_SUPPORTS_COLOR_DIAGNOSTICS failed with the following output:
+Change Dir: /Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/ninja cmTC_c78fe && [1/2] Building CXX object CMakeFiles/cmTC_c78fe.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_c78fe
+FAILED: cmTC_c78fe 
+: && /opt/homebrew/opt/llvm/bin/clang++ -fPIC -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wno-noexcept-type -Wnon-virtual-dtor -Wdelete-non-virtual-dtor -Wsuggest-override -Wstring-conversion -Wmisleading-indentation -Wctad-maybe-unsupported -fdiagnostics-color  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Wl,--color-diagnostics CMakeFiles/cmTC_c78fe.dir/src.cxx.o -o cmTC_c78fe   && :
+ld: unknown option: --color-diagnostics
+clang++: error: linker command failed with exit code 1 (use -v to see invocation)
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+int main() { return 0; }

@@ -1,0 +1,651 @@
+The system is: Darwin - 23.1.0 - arm64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /opt/homebrew/opt/llvm/bin/clang 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is Clang, found in "/Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/3.24.2/CompilerIdC/a.out"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /opt/homebrew/opt/llvm/bin/clang++ 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is Clang, found in "/Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/3.24.2/CompilerIdCXX/a.out"
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/ninja cmTC_44a49 && [1/2] Building C object CMakeFiles/cmTC_44a49.dir/CMakeCCompilerABI.c.o
+Homebrew clang version 17.0.2
+Target: arm64-apple-darwin23.1.0
+Thread model: posix
+InstalledDir: /opt/homebrew/opt/llvm/bin
+clang: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
+ (in-process)
+ "/opt/homebrew/Cellar/llvm/17.0.2/bin/clang-17" -cc1 -triple arm64-apple-macosx13.1.0 -Wundef-prefix=TARGET_OS_ -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -ffp-contract=on -fno-rounding-math -funwind-tables=1 -target-sdk-version=13.1 -fcompatibility-qualified-id-block-type-checking -fvisibility-inlines-hidden-static-local-var -target-cpu apple-m1 -target-feature +v8.5a -target-feature +aes -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +lse -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sha2 -target-feature +sha3 -target-feature +neon -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-abi darwinpcs -debugger-tuning=lldb -target-linker-version 857.1 -v -fcoverage-compilation-dir=/Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp -resource-dir /opt/homebrew/Cellar/llvm/17.0.2/lib/clang/17 -dependency-file CMakeFiles/cmTC_44a49.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_44a49.dir/CMakeCCompilerABI.c.o -sys-header-deps -canonical-system-headers -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -I/opt/homebrew/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/local/include -internal-isystem /opt/homebrew/Cellar/llvm/17.0.2/lib/clang/17/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include -fdebug-compilation-dir=/Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp -ferror-limit 19 -stack-protector 1 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fmax-type-align=16 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_44a49.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeCCompilerABI.c
+clang -cc1 version 17.0.2 based upon LLVM 17.0.2 default target arm64-apple-darwin23.1.0
+ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/local/include"
+ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/Library/Frameworks"
+#include "..." search starts here:
+#include <...> search starts here:
+ /opt/homebrew/include
+ /opt/homebrew/Cellar/llvm/17.0.2/lib/clang/17/include
+ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include
+ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks (framework directory)
+End of search list.
+[2/2] Linking C executable cmTC_44a49
+Homebrew clang version 17.0.2
+Target: arm64-apple-darwin23.1.0
+Thread model: posix
+InstalledDir: /opt/homebrew/opt/llvm/bin
+ "/usr/bin/ld" -demangle -lto_library /opt/homebrew/Cellar/llvm/17.0.2/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 13.1.0 13.1 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk -o cmTC_44a49 -L. -L/opt/homebrew/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_44a49.dir/CMakeCCompilerABI.c.o -lSystem /opt/homebrew/Cellar/llvm/17.0.2/lib/clang/17/lib/darwin/libclang_rt.osx.a
+@(#)PROGRAM:ld  PROJECT:ld64-820.1
+BUILD 20:07:05 Nov  7 2022
+configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+Library search paths:
+	.
+	/opt/homebrew/lib
+	/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/usr/lib
+Framework search paths:
+	/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks/
+
+
+
+Parsed C implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/opt/homebrew/include]
+    add: [/opt/homebrew/Cellar/llvm/17.0.2/lib/clang/17/include]
+    add: [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include]
+  end of search list found
+  collapse include dir [/opt/homebrew/include] ==> [/opt/homebrew/include]
+  collapse include dir [/opt/homebrew/Cellar/llvm/17.0.2/lib/clang/17/include] ==> [/opt/homebrew/Cellar/llvm/17.0.2/lib/clang/17/include]
+  collapse include dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include]
+  implicit include dirs: [/opt/homebrew/include;/opt/homebrew/Cellar/llvm/17.0.2/lib/clang/17/include;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include]
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld\.lld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/opt/homebrew/bin/ninja cmTC_44a49 && [1/2] Building C object CMakeFiles/cmTC_44a49.dir/CMakeCCompilerABI.c.o]
+  ignore line: [Homebrew clang version 17.0.2]
+  ignore line: [Target: arm64-apple-darwin23.1.0]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /opt/homebrew/opt/llvm/bin]
+  ignore line: [clang: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
+  ignore line: [ (in-process)]
+  ignore line: [ "/opt/homebrew/Cellar/llvm/17.0.2/bin/clang-17" -cc1 -triple arm64-apple-macosx13.1.0 -Wundef-prefix=TARGET_OS_ -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -ffp-contract=on -fno-rounding-math -funwind-tables=1 -target-sdk-version=13.1 -fcompatibility-qualified-id-block-type-checking -fvisibility-inlines-hidden-static-local-var -target-cpu apple-m1 -target-feature +v8.5a -target-feature +aes -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +lse -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sha2 -target-feature +sha3 -target-feature +neon -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-abi darwinpcs -debugger-tuning=lldb -target-linker-version 857.1 -v -fcoverage-compilation-dir=/Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp -resource-dir /opt/homebrew/Cellar/llvm/17.0.2/lib/clang/17 -dependency-file CMakeFiles/cmTC_44a49.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_44a49.dir/CMakeCCompilerABI.c.o -sys-header-deps -canonical-system-headers -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -I/opt/homebrew/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/local/include -internal-isystem /opt/homebrew/Cellar/llvm/17.0.2/lib/clang/17/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include -fdebug-compilation-dir=/Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp -ferror-limit 19 -stack-protector 1 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fmax-type-align=16 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_44a49.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeCCompilerABI.c]
+  ignore line: [clang -cc1 version 17.0.2 based upon LLVM 17.0.2 default target arm64-apple-darwin23.1.0]
+  ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/local/include"]
+  ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/Library/Frameworks"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /opt/homebrew/include]
+  ignore line: [ /opt/homebrew/Cellar/llvm/17.0.2/lib/clang/17/include]
+  ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include]
+  ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks (framework directory)]
+  ignore line: [End of search list.]
+  ignore line: [[2/2] Linking C executable cmTC_44a49]
+  ignore line: [Homebrew clang version 17.0.2]
+  ignore line: [Target: arm64-apple-darwin23.1.0]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /opt/homebrew/opt/llvm/bin]
+  link line: [ "/usr/bin/ld" -demangle -lto_library /opt/homebrew/Cellar/llvm/17.0.2/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 13.1.0 13.1 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk -o cmTC_44a49 -L. -L/opt/homebrew/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_44a49.dir/CMakeCCompilerABI.c.o -lSystem /opt/homebrew/Cellar/llvm/17.0.2/lib/clang/17/lib/darwin/libclang_rt.osx.a]
+    arg [/usr/bin/ld] ==> ignore
+    arg [-demangle] ==> ignore
+    arg [-lto_library] ==> ignore, skip following value
+    arg [/opt/homebrew/Cellar/llvm/17.0.2/lib/libLTO.dylib] ==> skip value of -lto_library
+    arg [-dynamic] ==> ignore
+    arg [-arch] ==> ignore
+    arg [arm64] ==> ignore
+    arg [-platform_version] ==> ignore
+    arg [macos] ==> ignore
+    arg [13.1.0] ==> ignore
+    arg [13.1] ==> ignore
+    arg [-syslibroot] ==> ignore
+    arg [/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_44a49] ==> ignore
+    arg [-L.] ==> ignore
+    arg [-L/opt/homebrew/lib] ==> dir [/opt/homebrew/lib]
+    arg [-search_paths_first] ==> ignore
+    arg [-headerpad_max_install_names] ==> ignore
+    arg [-v] ==> ignore
+    arg [CMakeFiles/cmTC_44a49.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lSystem] ==> lib [System]
+    arg [/opt/homebrew/Cellar/llvm/17.0.2/lib/clang/17/lib/darwin/libclang_rt.osx.a] ==> lib [/opt/homebrew/Cellar/llvm/17.0.2/lib/clang/17/lib/darwin/libclang_rt.osx.a]
+  Library search paths: [;.;/opt/homebrew/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/usr/lib]
+  Framework search paths: [;/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks/]
+  remove lib [System]
+  remove lib [/opt/homebrew/Cellar/llvm/17.0.2/lib/clang/17/lib/darwin/libclang_rt.osx.a]
+  collapse library dir [/opt/homebrew/lib] ==> [/opt/homebrew/lib]
+  collapse library dir [.] ==> [/Users/akram/Documents/Source/llvm-project/clang]
+  collapse library dir [/opt/homebrew/lib] ==> [/opt/homebrew/lib]
+  collapse library dir [/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/usr/lib] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/usr/lib]
+  collapse framework dir [/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks/] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks]
+  implicit libs: []
+  implicit objs: []
+  implicit dirs: [/opt/homebrew/lib;/Users/akram/Documents/Source/llvm-project/clang;/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/usr/lib]
+  implicit fwks: [/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks]
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/ninja cmTC_19798 && [1/2] Building CXX object CMakeFiles/cmTC_19798.dir/CMakeCXXCompilerABI.cpp.o
+Homebrew clang version 17.0.2
+Target: arm64-apple-darwin23.1.0
+Thread model: posix
+InstalledDir: /opt/homebrew/opt/llvm/bin
+clang++: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
+ (in-process)
+ "/opt/homebrew/Cellar/llvm/17.0.2/bin/clang-17" -cc1 -triple arm64-apple-macosx13.1.0 -Wundef-prefix=TARGET_OS_ -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -ffp-contract=on -fno-rounding-math -funwind-tables=1 -target-sdk-version=13.1 -fcompatibility-qualified-id-block-type-checking -fvisibility-inlines-hidden-static-local-var -target-cpu apple-m1 -target-feature +v8.5a -target-feature +aes -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +lse -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sha2 -target-feature +sha3 -target-feature +neon -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-abi darwinpcs -debugger-tuning=lldb -target-linker-version 857.1 -v -fcoverage-compilation-dir=/Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp -resource-dir /opt/homebrew/Cellar/llvm/17.0.2/lib/clang/17 -dependency-file CMakeFiles/cmTC_19798.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_19798.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -canonical-system-headers -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -I/opt/homebrew/include -internal-isystem /opt/homebrew/opt/llvm/bin/../include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/local/include -internal-isystem /opt/homebrew/Cellar/llvm/17.0.2/lib/clang/17/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include -fdeprecated-macro -fdebug-compilation-dir=/Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp -ferror-limit 19 -stack-protector 1 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -fmax-type-align=16 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_19798.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+clang -cc1 version 17.0.2 based upon LLVM 17.0.2 default target arm64-apple-darwin23.1.0
+ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/local/include"
+ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/Library/Frameworks"
+#include "..." search starts here:
+#include <...> search starts here:
+ /opt/homebrew/include
+ /opt/homebrew/opt/llvm/bin/../include/c++/v1
+ /opt/homebrew/Cellar/llvm/17.0.2/lib/clang/17/include
+ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include
+ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks (framework directory)
+End of search list.
+[2/2] Linking CXX executable cmTC_19798
+Homebrew clang version 17.0.2
+Target: arm64-apple-darwin23.1.0
+Thread model: posix
+InstalledDir: /opt/homebrew/opt/llvm/bin
+ "/usr/bin/ld" -demangle -lto_library /opt/homebrew/Cellar/llvm/17.0.2/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 13.1.0 13.1 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk -o cmTC_19798 -L. -L/opt/homebrew/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_19798.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /opt/homebrew/Cellar/llvm/17.0.2/lib/clang/17/lib/darwin/libclang_rt.osx.a
+@(#)PROGRAM:ld  PROJECT:ld64-820.1
+BUILD 20:07:05 Nov  7 2022
+configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+Library search paths:
+	.
+	/opt/homebrew/lib
+	/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/usr/lib
+Framework search paths:
+	/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks/
+
+
+
+Parsed CXX implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/opt/homebrew/include]
+    add: [/opt/homebrew/opt/llvm/bin/../include/c++/v1]
+    add: [/opt/homebrew/Cellar/llvm/17.0.2/lib/clang/17/include]
+    add: [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include]
+  end of search list found
+  collapse include dir [/opt/homebrew/include] ==> [/opt/homebrew/include]
+  collapse include dir [/opt/homebrew/opt/llvm/bin/../include/c++/v1] ==> [/opt/homebrew/opt/llvm/include/c++/v1]
+  collapse include dir [/opt/homebrew/Cellar/llvm/17.0.2/lib/clang/17/include] ==> [/opt/homebrew/Cellar/llvm/17.0.2/lib/clang/17/include]
+  collapse include dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include]
+  implicit include dirs: [/opt/homebrew/include;/opt/homebrew/opt/llvm/include/c++/v1;/opt/homebrew/Cellar/llvm/17.0.2/lib/clang/17/include;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include]
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld\.lld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/opt/homebrew/bin/ninja cmTC_19798 && [1/2] Building CXX object CMakeFiles/cmTC_19798.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [Homebrew clang version 17.0.2]
+  ignore line: [Target: arm64-apple-darwin23.1.0]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /opt/homebrew/opt/llvm/bin]
+  ignore line: [clang++: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
+  ignore line: [ (in-process)]
+  ignore line: [ "/opt/homebrew/Cellar/llvm/17.0.2/bin/clang-17" -cc1 -triple arm64-apple-macosx13.1.0 -Wundef-prefix=TARGET_OS_ -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -ffp-contract=on -fno-rounding-math -funwind-tables=1 -target-sdk-version=13.1 -fcompatibility-qualified-id-block-type-checking -fvisibility-inlines-hidden-static-local-var -target-cpu apple-m1 -target-feature +v8.5a -target-feature +aes -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +lse -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sha2 -target-feature +sha3 -target-feature +neon -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-abi darwinpcs -debugger-tuning=lldb -target-linker-version 857.1 -v -fcoverage-compilation-dir=/Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp -resource-dir /opt/homebrew/Cellar/llvm/17.0.2/lib/clang/17 -dependency-file CMakeFiles/cmTC_19798.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_19798.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -canonical-system-headers -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -I/opt/homebrew/include -internal-isystem /opt/homebrew/opt/llvm/bin/../include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/local/include -internal-isystem /opt/homebrew/Cellar/llvm/17.0.2/lib/clang/17/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include -fdeprecated-macro -fdebug-compilation-dir=/Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp -ferror-limit 19 -stack-protector 1 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -fmax-type-align=16 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_19798.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [clang -cc1 version 17.0.2 based upon LLVM 17.0.2 default target arm64-apple-darwin23.1.0]
+  ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/local/include"]
+  ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/Library/Frameworks"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /opt/homebrew/include]
+  ignore line: [ /opt/homebrew/opt/llvm/bin/../include/c++/v1]
+  ignore line: [ /opt/homebrew/Cellar/llvm/17.0.2/lib/clang/17/include]
+  ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include]
+  ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks (framework directory)]
+  ignore line: [End of search list.]
+  ignore line: [[2/2] Linking CXX executable cmTC_19798]
+  ignore line: [Homebrew clang version 17.0.2]
+  ignore line: [Target: arm64-apple-darwin23.1.0]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /opt/homebrew/opt/llvm/bin]
+  link line: [ "/usr/bin/ld" -demangle -lto_library /opt/homebrew/Cellar/llvm/17.0.2/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 13.1.0 13.1 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk -o cmTC_19798 -L. -L/opt/homebrew/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_19798.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /opt/homebrew/Cellar/llvm/17.0.2/lib/clang/17/lib/darwin/libclang_rt.osx.a]
+    arg [/usr/bin/ld] ==> ignore
+    arg [-demangle] ==> ignore
+    arg [-lto_library] ==> ignore, skip following value
+    arg [/opt/homebrew/Cellar/llvm/17.0.2/lib/libLTO.dylib] ==> skip value of -lto_library
+    arg [-dynamic] ==> ignore
+    arg [-arch] ==> ignore
+    arg [arm64] ==> ignore
+    arg [-platform_version] ==> ignore
+    arg [macos] ==> ignore
+    arg [13.1.0] ==> ignore
+    arg [13.1] ==> ignore
+    arg [-syslibroot] ==> ignore
+    arg [/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_19798] ==> ignore
+    arg [-L.] ==> ignore
+    arg [-L/opt/homebrew/lib] ==> dir [/opt/homebrew/lib]
+    arg [-search_paths_first] ==> ignore
+    arg [-headerpad_max_install_names] ==> ignore
+    arg [-v] ==> ignore
+    arg [CMakeFiles/cmTC_19798.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lc++] ==> lib [c++]
+    arg [-lSystem] ==> lib [System]
+    arg [/opt/homebrew/Cellar/llvm/17.0.2/lib/clang/17/lib/darwin/libclang_rt.osx.a] ==> lib [/opt/homebrew/Cellar/llvm/17.0.2/lib/clang/17/lib/darwin/libclang_rt.osx.a]
+  Library search paths: [;.;/opt/homebrew/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/usr/lib]
+  Framework search paths: [;/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks/]
+  remove lib [System]
+  remove lib [/opt/homebrew/Cellar/llvm/17.0.2/lib/clang/17/lib/darwin/libclang_rt.osx.a]
+  collapse library dir [/opt/homebrew/lib] ==> [/opt/homebrew/lib]
+  collapse library dir [.] ==> [/Users/akram/Documents/Source/llvm-project/clang]
+  collapse library dir [/opt/homebrew/lib] ==> [/opt/homebrew/lib]
+  collapse library dir [/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/usr/lib] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/usr/lib]
+  collapse framework dir [/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks/] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks]
+  implicit libs: [c++]
+  implicit objs: []
+  implicit dirs: [/opt/homebrew/lib;/Users/akram/Documents/Source/llvm-project/clang;/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/usr/lib]
+  implicit fwks: [/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks]
+
+
+Performing C SOURCE FILE Test HAVE_FFI_CALL succeeded with the following output:
+Change Dir: /Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/ninja cmTC_ba384 && [1/2] Building C object CMakeFiles/cmTC_ba384.dir/src.c.o
+[2/2] Linking C executable cmTC_ba384
+
+
+Source file was:
+
+    struct ffi_cif;
+    typedef struct ffi_cif ffi_cif;
+    void ffi_call(ffi_cif *cif, void (*fn)(void), void *rvalue, void **avalue);
+    int main(void) { ffi_call(0, 0, 0, 0); }
+Determining if the include file histedit.h exists passed with the following output:
+Change Dir: /Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/ninja cmTC_23a28 && [1/2] Building C object CMakeFiles/cmTC_23a28.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_23a28
+
+
+
+Performing C SOURCE FILE Test Terminfo_LINKABLE succeeded with the following output:
+Change Dir: /Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/ninja cmTC_bfdb0 && [1/2] Building C object CMakeFiles/cmTC_bfdb0.dir/src.c.o
+[2/2] Linking C executable cmTC_bfdb0
+
+
+Source file was:
+
+    int setupterm(char *term, int filedes, int *errret);
+    int main(void) { return setupterm(0, 0, 0); }
+Performing C++ SOURCE FILE Test LLVM_LIBSTDCXX_MIN succeeded with the following output:
+Change Dir: /Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/ninja cmTC_51d3b && [1/2] Building CXX object CMakeFiles/cmTC_51d3b.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_51d3b
+
+
+Source file was:
+
+#include <iosfwd>
+#if defined(__GLIBCXX__)
+#if !defined(_GLIBCXX_RELEASE) || _GLIBCXX_RELEASE < 7
+#error Unsupported libstdc++ version
+#endif
+#endif
+int main() { return 0; }
+
+Performing C++ SOURCE FILE Test LLVM_LIBSTDCXX_SOFT_ERROR succeeded with the following output:
+Change Dir: /Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/ninja cmTC_e7642 && [1/2] Building CXX object CMakeFiles/cmTC_e7642.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_e7642
+
+
+Source file was:
+
+#include <iosfwd>
+#if defined(__GLIBCXX__)
+#if !defined(_GLIBCXX_RELEASE) || _GLIBCXX_RELEASE < 7
+#error Unsupported libstdc++ version
+#endif
+#endif
+int main() { return 0; }
+
+Performing C SOURCE FILE Test C_SUPPORTS_FPIC succeeded with the following output:
+Change Dir: /Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/ninja cmTC_91201 && [1/2] Building C object CMakeFiles/cmTC_91201.dir/src.c.o
+[2/2] Linking C executable cmTC_91201
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C++ SOURCE FILE Test CXX_SUPPORTS_FPIC succeeded with the following output:
+Change Dir: /Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/ninja cmTC_7a4d6 && [1/2] Building CXX object CMakeFiles/cmTC_7a4d6.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_7a4d6
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test SUPPORTS_FVISIBILITY_INLINES_HIDDEN_FLAG succeeded with the following output:
+Change Dir: /Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/ninja cmTC_9bd65 && [1/2] Building CXX object CMakeFiles/cmTC_9bd65.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_9bd65
+
+
+Source file was:
+int main() { return 0; }
+Performing C SOURCE FILE Test C_SUPPORTS_WERROR_DATE_TIME succeeded with the following output:
+Change Dir: /Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/ninja cmTC_c4596 && [1/2] Building C object CMakeFiles/cmTC_c4596.dir/src.c.o
+[2/2] Linking C executable cmTC_c4596
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C++ SOURCE FILE Test CXX_SUPPORTS_WERROR_DATE_TIME succeeded with the following output:
+Change Dir: /Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/ninja cmTC_a1ec7 && [1/2] Building CXX object CMakeFiles/cmTC_a1ec7.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_a1ec7
+
+
+Source file was:
+int main() { return 0; }
+Performing C SOURCE FILE Test C_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW succeeded with the following output:
+Change Dir: /Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/ninja cmTC_6b313 && [1/2] Building C object CMakeFiles/cmTC_6b313.dir/src.c.o
+[2/2] Linking C executable cmTC_6b313
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C++ SOURCE FILE Test CXX_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW succeeded with the following output:
+Change Dir: /Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/ninja cmTC_fe0d6 && [1/2] Building CXX object CMakeFiles/cmTC_fe0d6.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_fe0d6
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test CXX_SUPPORTS_MISSING_FIELD_INITIALIZERS_FLAG succeeded with the following output:
+Change Dir: /Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/ninja cmTC_4f4fe && [1/2] Building CXX object CMakeFiles/cmTC_4f4fe.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_4f4fe
+
+
+Source file was:
+int main() { return 0; }
+Performing C SOURCE FILE Test C_SUPPORTS_IMPLICIT_FALLTHROUGH_FLAG succeeded with the following output:
+Change Dir: /Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/ninja cmTC_6a9d0 && [1/2] Building C object CMakeFiles/cmTC_6a9d0.dir/src.c.o
+[2/2] Linking C executable cmTC_6a9d0
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C++ SOURCE FILE Test CXX_SUPPORTS_IMPLICIT_FALLTHROUGH_FLAG succeeded with the following output:
+Change Dir: /Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/ninja cmTC_621d6 && [1/2] Building CXX object CMakeFiles/cmTC_621d6.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_621d6
+
+
+Source file was:
+int main() { return 0; }
+Performing C SOURCE FILE Test C_SUPPORTS_COVERED_SWITCH_DEFAULT_FLAG succeeded with the following output:
+Change Dir: /Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/ninja cmTC_ac384 && [1/2] Building C object CMakeFiles/cmTC_ac384.dir/src.c.o
+[2/2] Linking C executable cmTC_ac384
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C++ SOURCE FILE Test CXX_SUPPORTS_COVERED_SWITCH_DEFAULT_FLAG succeeded with the following output:
+Change Dir: /Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/ninja cmTC_e26b3 && [1/2] Building CXX object CMakeFiles/cmTC_e26b3.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_e26b3
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test CXX_SUPPORTS_NOEXCEPT_TYPE_FLAG succeeded with the following output:
+Change Dir: /Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/ninja cmTC_32d98 && [1/2] Building CXX object CMakeFiles/cmTC_32d98.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_32d98
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test CXX_WONT_WARN_ON_FINAL_NONVIRTUALDTOR succeeded with the following output:
+Change Dir: /Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/ninja cmTC_95a5b && [1/2] Building CXX object CMakeFiles/cmTC_95a5b.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_95a5b
+
+
+Source file was:
+class f {};
+                             class base {friend f; public: virtual void anchor();protected: ~base();};
+                             int main() { return 0; }
+Performing C++ SOURCE FILE Test CXX_SUPPORTS_SUGGEST_OVERRIDE_FLAG succeeded with the following output:
+Change Dir: /Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/ninja cmTC_edbd4 && [1/2] Building CXX object CMakeFiles/cmTC_edbd4.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_edbd4
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test CXX_WSUGGEST_OVERRIDE_ALLOWS_ONLY_FINAL succeeded with the following output:
+Change Dir: /Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/ninja cmTC_0ecd7 && [1/2] Building CXX object CMakeFiles/cmTC_0ecd7.dir/src.cxx.o
+/Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp/src.cxx:1:7: warning: 'base' has virtual functions but non-virtual destructor [-Wnon-virtual-dtor]
+    1 | class base {public: virtual void anchor();};
+      |       ^
+/Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp/src.cxx:2:38: warning: 'derived' has virtual functions but non-virtual destructor [-Wnon-virtual-dtor]
+    2 |                                class derived : base {public: void anchor() final;};
+      |                                      ^
+2 warnings generated.
+[2/2] Linking CXX executable cmTC_0ecd7
+
+
+Source file was:
+class base {public: virtual void anchor();};
+                               class derived : base {public: void anchor() final;};
+                               int main() { return 0; }
+Performing C SOURCE FILE Test C_WCOMMENT_ALLOWS_LINE_WRAP succeeded with the following output:
+Change Dir: /Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/ninja cmTC_fac3e && [1/2] Building C object CMakeFiles/cmTC_fac3e.dir/src.c.o
+[2/2] Linking C executable cmTC_fac3e
+
+
+Source file was:
+// \
+//
+int main(void) {return 0;}
+Performing C SOURCE FILE Test C_SUPPORTS_STRING_CONVERSION_FLAG succeeded with the following output:
+Change Dir: /Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/ninja cmTC_8ea3e && [1/2] Building C object CMakeFiles/cmTC_8ea3e.dir/src.c.o
+[2/2] Linking C executable cmTC_8ea3e
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C++ SOURCE FILE Test CXX_SUPPORTS_STRING_CONVERSION_FLAG succeeded with the following output:
+Change Dir: /Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/ninja cmTC_acef4 && [1/2] Building CXX object CMakeFiles/cmTC_acef4.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_acef4
+
+
+Source file was:
+int main() { return 0; }
+Performing C SOURCE FILE Test C_SUPPORTS_MISLEADING_INDENTATION_FLAG succeeded with the following output:
+Change Dir: /Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/ninja cmTC_ad36f && [1/2] Building C object CMakeFiles/cmTC_ad36f.dir/src.c.o
+[2/2] Linking C executable cmTC_ad36f
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C++ SOURCE FILE Test CXX_SUPPORTS_MISLEADING_INDENTATION_FLAG succeeded with the following output:
+Change Dir: /Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/ninja cmTC_ae831 && [1/2] Building CXX object CMakeFiles/cmTC_ae831.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_ae831
+
+
+Source file was:
+int main() { return 0; }
+Performing C SOURCE FILE Test C_SUPPORTS_CTAD_MAYBE_UNSPPORTED_FLAG succeeded with the following output:
+Change Dir: /Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/ninja cmTC_39473 && [1/2] Building C object CMakeFiles/cmTC_39473.dir/src.c.o
+[2/2] Linking C executable cmTC_39473
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C++ SOURCE FILE Test CXX_SUPPORTS_CTAD_MAYBE_UNSPPORTED_FLAG succeeded with the following output:
+Change Dir: /Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/ninja cmTC_92464 && [1/2] Building CXX object CMakeFiles/cmTC_92464.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_92464
+
+
+Source file was:
+int main() { return 0; }
+Determining if the os_signpost_interval_begin exist passed with the following output:
+Change Dir: /Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/ninja cmTC_0a331 && [1/2] Building C object CMakeFiles/cmTC_0a331.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_0a331
+
+
+File /Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <os/signpost.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef os_signpost_interval_begin
+  return ((int*)(&os_signpost_interval_begin))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Performing C++ SOURCE FILE Test macos_signposts_usable succeeded with the following output:
+Change Dir: /Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/ninja cmTC_ea47d && [1/2] Building CXX object CMakeFiles/cmTC_ea47d.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_ea47d
+
+
+Source file was:
+#include <os/signpost.h>
+    int main() { os_signpost_interval_begin(nullptr, 0, "", ""); return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_ATOMICS_WITHOUT_LIB succeeded with the following output:
+Change Dir: /Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/ninja cmTC_20ff2 && [1/2] Building CXX object CMakeFiles/cmTC_20ff2.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_20ff2
+
+
+Source file was:
+
+#include <atomic>
+std::atomic<int> x;
+std::atomic<short> y;
+std::atomic<char> z;
+int main() {
+  ++z;
+  ++y;
+  return ++x;
+}
+
+Performing C++ SOURCE FILE Test HAVE_CXX_ATOMICS64_WITHOUT_LIB succeeded with the following output:
+Change Dir: /Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/ninja cmTC_5265d && [1/2] Building CXX object CMakeFiles/cmTC_5265d.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_5265d
+
+
+Source file was:
+
+#include <atomic>
+#include <cstdint>
+std::atomic<uint64_t> x (0);
+int main() {
+  uint64_t i = x.load(std::memory_order_relaxed);
+  (void)i;
+  return 0;
+}
+
+Performing C++ SOURCE FILE Test LLVM_HAS_ATOMICS succeeded with the following output:
+Change Dir: /Users/akram/Documents/Source/llvm-project/clang/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/ninja cmTC_cc898 && [1/2] Building CXX object CMakeFiles/cmTC_cc898.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_cc898
+
+
+Source file was:
+
+#ifdef _MSC_VER
+#include <windows.h>
+#endif
+int main() {
+#ifdef _MSC_VER
+        volatile LONG val = 1;
+        MemoryBarrier();
+        InterlockedCompareExchange(&val, 0, 1);
+        InterlockedIncrement(&val);
+        InterlockedDecrement(&val);
+#else
+        volatile unsigned long val = 1;
+        __sync_synchronize();
+        __sync_val_compare_and_swap(&val, 1, 0);
+        __sync_add_and_fetch(&val, 1);
+        __sync_sub_and_fetch(&val, 1);
+#endif
+        return 0;
+      }
+
