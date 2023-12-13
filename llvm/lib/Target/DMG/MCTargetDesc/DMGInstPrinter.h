@@ -2,6 +2,7 @@
 #define LLVM_LIB_TARGET_DMG_DMGINSTPRINTER_H
 
 #include "llvm/MC/MCInstPrinter.h"
+#include "DMGMCTargetDesc.h"
 
 namespace llvm {
 
@@ -24,6 +25,7 @@ public:
 
 private:
     void printMemOperandRI(const MCInst *MI, unsigned OpNum, raw_ostream &O);
+    static const char *getRegisterName(MCRegister Reg, unsigned AltIdx = DMG::NoRegAltName);
     void printOperand(const MCInst *MI, unsigned OpNum, raw_ostream &O);
     void printOperand(const MCInst *MI, uint64_t /*Address*/, unsigned OpNum,
                         raw_ostream &O) {
