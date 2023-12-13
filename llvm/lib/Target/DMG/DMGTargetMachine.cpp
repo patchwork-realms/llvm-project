@@ -3,10 +3,18 @@
 #include "DMGMachineFunctionInfo.h"
 #include "DMGTargetTransformInfo.h"
 #include "TargetInfo/DMGTargetInfo.h"
+#include "llvm/CodeGen/MachineModuleInfo.h"
 #include "llvm/CodeGen/Passes.h"
 #include "llvm/CodeGen/TargetLoweringObjectFileImpl.h"
 #include "llvm/CodeGen/TargetPassConfig.h"
+#include "llvm/IR/IRPrintingPasses.h"
+#include "llvm/IR/LegacyPassManager.h"
 #include "llvm/MC/TargetRegistry.h"
+#include "llvm/Passes/PassBuilder.h"
+#include "llvm/Support/CodeGen.h"
+#include "llvm/Support/Compiler.h"
+#include "llvm/Support/ErrorHandling.h"
+#include "llvm/Target/TargetLoweringObjectFile.h"
 #include <optional>
 
 using namespace llvm;
@@ -38,15 +46,31 @@ bool DMGTargetMachine::addPassesToEmitFile(PassManagerBase &PM, raw_pwrite_strea
                                            raw_pwrite_stream *DwoOut, CodeGenFileType FileType,
                                            bool DisableVerify,
                                            MachineModuleInfoWrapperPass *MMIWP) {
-assert(true && "Pass to emit file from clang not present!");
-return false;
+
+    TargetPassConfig *PassConfig = createPassConfig(PM);
+    PassConfig->addCodeGenPrepare();
+
+    switch (FileType) {
+    case CodeGenFileType::AssemblyFile:
+        PM.add(createPrintModulePass(Out, "", true));
+        break;
+    case CodeGenFileType::ObjectFile:
+        if (!MMIWP)
+            MMIWP = new MachineModuleInfoWrapperPass(this);
+        PM.add(MMIWP);
+        if (addAsmPrinter(PM, Out, DwoOut, FileType, MMIWP->getMMI().getContext()))
+            return true;
+        break;
+    case CodeGenFileType::Null:
+        break;
+    }
+    return false;
 }
 
 // TODO: Add required passes!
 bool DMGTargetMachine::addPassesToEmitMC(PassManagerBase &PM, MCContext *&Ctx,
                                          raw_pwrite_stream &Out, bool DisableVerify) {
-assert(true && "Pass to emit MC from clang not present!");
-return false;
+return true;
 }
 
 namespace {
