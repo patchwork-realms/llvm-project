@@ -126,6 +126,12 @@ createTargetCodeGenInfo(CodeGenModule &CGM) {
       return createPNaClTargetCodeGenInfo(CGM);
     return createMIPSTargetCodeGenInfo(CGM, /*IsOS32=*/true);
 
+  case llvm::Triple::dmg: {
+    unsigned NRR = 4;
+    unsigned NPR = 4;
+    return createDMGTargetCodeGenInfo(CGM, NPR, NRR);
+  }
+  
   case llvm::Triple::mips64:
   case llvm::Triple::mips64el:
     return createMIPSTargetCodeGenInfo(CGM, /*IsOS32=*/false);

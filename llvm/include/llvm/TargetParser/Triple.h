@@ -56,6 +56,7 @@ public:
     bpfel,          // eBPF or extended BPF or 64-bit BPF (little endian)
     bpfeb,          // eBPF or extended BPF or 64-bit BPF (big endian)
     csky,           // CSKY: csky
+    dmg,            // DMG: Game Boy
     dxil,           // DXIL 32-bit DirectX bytecode
     hexagon,        // Hexagon: hexagon
     loongarch32,    // LoongArch (32-bit): loongarch32
@@ -796,6 +797,11 @@ public:
   bool isOpenHOS() const { return getEnvironment() == Triple::OpenHOS; }
 
   bool isOSLiteOS() const { return getOS() == Triple::LiteOS; }
+
+  /// Tests whether the target is DMG.
+  bool isDMG() const {
+    return getArch() == Triple::dmg;
+  }
 
   /// Tests whether the target is DXIL.
   bool isDXIL() const {
