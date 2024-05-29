@@ -465,6 +465,9 @@ std::unique_ptr<TargetCodeGenInfo>
 createCSKYTargetCodeGenInfo(CodeGenModule &CGM, unsigned FLen);
 
 std::unique_ptr<TargetCodeGenInfo>
+createDMGTargetCodeGenInfo(CodeGenModule &CGM, unsigned NPR, unsigned NRR);
+
+std::unique_ptr<TargetCodeGenInfo>
 createHexagonTargetCodeGenInfo(CodeGenModule &CGM);
 
 std::unique_ptr<TargetCodeGenInfo>

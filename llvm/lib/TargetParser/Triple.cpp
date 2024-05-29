@@ -38,6 +38,7 @@ StringRef Triple::getArchTypeName(ArchType Kind) {
   case bpfeb:          return "bpfeb";
   case bpfel:          return "bpfel";
   case csky:           return "csky";
+  case dmg:            return "dmg";
   case dxil:           return "dxil";
   case hexagon:        return "hexagon";
   case hsail64:        return "hsail64";
@@ -603,6 +604,7 @@ static Triple::ArchType parseArch(StringRef ArchName) {
           .Cases("dxil", "dxilv1.0", "dxilv1.1", "dxilv1.2", "dxilv1.3",
                  "dxilv1.4", "dxilv1.5", "dxilv1.6", "dxilv1.7", "dxilv1.8",
                  Triple::dxil)
+          .Cases("dmg", "DMG", "GameBoy", "Game Boy", Triple::dmg)
           .Case("xtensa", Triple::xtensa)
           .Default(Triple::UnknownArch);
 
@@ -900,6 +902,7 @@ static Triple::ObjectFormatType getDefaultFormat(const Triple &T) {
   case Triple::bpfeb:
   case Triple::bpfel:
   case Triple::csky:
+  case Triple::dmg:
   case Triple::hexagon:
   case Triple::hsail64:
   case Triple::hsail:
@@ -1589,6 +1592,7 @@ unsigned Triple::getArchPointerBitWidth(llvm::Triple::ArchType Arch) {
     return 0;
 
   case llvm::Triple::avr:
+  case llvm::Triple::dmg:
   case llvm::Triple::msp430:
     return 16;
 
@@ -1678,6 +1682,7 @@ Triple Triple::get32BitArchVariant() const {
   case Triple::avr:
   case Triple::bpfeb:
   case Triple::bpfel:
+  case Triple::dmg:
   case Triple::msp430:
   case Triple::systemz:
   case Triple::ve:
@@ -1758,6 +1763,7 @@ Triple Triple::get64BitArchVariant() const {
   case Triple::arc:
   case Triple::avr:
   case Triple::csky:
+  case Triple::dmg:
   case Triple::dxil:
   case Triple::hexagon:
   case Triple::kalimba:
