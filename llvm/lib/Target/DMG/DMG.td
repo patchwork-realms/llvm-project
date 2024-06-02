@@ -32,7 +32,7 @@ def DMGInstrInfo : InstrInfo;
 class Proc<string Name, list<SubtargetFeature> Features>
     : Processor<Name, NoItineraries, Features>;
 
-// def : Proc<"generic",   []>;
+def : Proc<"generic",   []>;
 // def : Proc<"v2",        [FeatureSoftMulDiv, FeatureSoftFloat]>;
 
 //===---------------------------------------------------------------------===//

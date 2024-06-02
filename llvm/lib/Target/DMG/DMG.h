@@ -7,8 +7,11 @@
 namespace llvm {
 
 class DMGTargetMachine;
+class DMGSubtarget;
 class FunctionPass;
 class PassRegistry;
+
+// TODO: Add the GlobalISel initializePass functions here.
 
 FunctionPass *createDMGISelDag(DMGTargetMachine &TM, CodeGenOptLevel OptLevel);
 FunctionPass *createDMGExpandPseudosPass();

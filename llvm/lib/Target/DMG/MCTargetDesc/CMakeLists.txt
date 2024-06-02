@@ -1,6 +1,6 @@
 add_llvm_component_library(LLVMDMGDesc
-  DMGInstPrinter.cpp
   DMGMCTargetDesc.cpp
+  DMGInstPrinter.cpp
   # DMGMCAsmInfo.cpp
 
   LINK_COMPONENTS

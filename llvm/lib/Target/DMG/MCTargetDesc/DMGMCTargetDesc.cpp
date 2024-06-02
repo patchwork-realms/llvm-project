@@ -1,19 +1,15 @@
 #include "DMGMCTargetDesc.h"
 #include "DMGInstPrinter.h"
 #include "DMGMCAsmInfo.h"
-#include "DMGTargetStreamer.h"
 #include "TargetInfo/DMGTargetInfo.h"
-
-#include "llvm/MC/MCDwarf.h"
+#include "llvm/MC/MCInstrAnalysis.h"
 #include "llvm/MC/MCInstrInfo.h"
 #include "llvm/MC/MCRegisterInfo.h"
 #include "llvm/MC/MCSubtargetInfo.h"
 #include "llvm/MC/TargetRegistry.h"
-#include "llvm/Support/ErrorHandling.h"
-#include "llvm/Support/FormattedStream.h"
+#include "llvm/TargetParser/Host.h"
 
 #define GET_INSTRINFO_MC_DESC
-#define ENABLE_INSTR_PREDICATE_VERIFIER
 #include "DMGGenInstrInfo.inc"
 
 #define GET_SUBTARGETINFO_MC_DESC
@@ -25,72 +21,55 @@
 using namespace llvm;
 
 static MCInstrInfo *createDMGMCInstrInfo() {
-  auto *X = new MCInstrInfo();
+  MCInstrInfo *X = new MCInstrInfo();
   InitDMGMCInstrInfo(X);
   return X;
 }
 
 static MCRegisterInfo *createDMGMCRegisterInfo(const Triple &TT) {
-  auto *X = new MCRegisterInfo();
-  InitDMGMCRegisterInfo(X, 0);
+  MCRegisterInfo *X = new MCRegisterInfo();
+  InitDMGMCRegisterInfo(X, DMG::RA);
   return X;
 }
 
 static MCSubtargetInfo *createDMGMCSubtargetInfo(const Triple &TT,
                                                  StringRef CPU, StringRef FS) {
-  return createDMGMCSubtargetInfoImpl(TT, CPU, /*TuneCPU=*/CPU, FS);
+  return createDMGMCSubtargetInfoImpl(TT, CPU, CPU, FS);
 }
 
-static MCAsmInfo *createDMGMCAsmInfo(const MCRegisterInfo &MRI,
-                                     const Triple &TT,
-                                     const MCTargetOptions &Options) {
-  MCAsmInfo *MAI = new DMGMCAsmInfo(TT);
-
-  // Initial state of the frame pointer is SP.
-  // TODO: Actually add SP. This is a placeholder value to get the build working.
-  MCCFIInstruction Inst = MCCFIInstruction::cfiDefCfa(nullptr, DMG::RA, 0);
-  MAI->addInitialFrameState(Inst);
-
-  return MAI;
+static MCStreamer *
+createDMGMCStreamer(const Triple &T, MCContext &Ctx,
+                    std::unique_ptr<MCAsmBackend> &&MAB,
+                    std::unique_ptr<MCObjectWriter> &&OW,
+                    std::unique_ptr<MCCodeEmitter> &&Emitter) {
+  return createELFStreamer(Ctx, std::move(MAB), std::move(OW), std::move(Emitter));
 }
 
 static MCInstPrinter *createDMGMCInstPrinter(const Triple &T,
-                                             unsigned SyntaxVariant,
-                                             const MCAsmInfo &MAI,
-                                             const MCInstrInfo &MII,
-                                             const MCRegisterInfo &MRI) {
-  return new DMGInstPrinter(MAI, MII, MRI);
+                                           unsigned SyntaxVariant,
+                                           const MCAsmInfo &MAI,
+                                           const MCInstrInfo &MII,
+                                           const MCRegisterInfo &MRI) {
+  if (SyntaxVariant == 0)
+    return new DMGInstPrinter(MAI, MII, MRI);
+  return nullptr;
 }
 
-DMGTargetStreamer::DMGTargetStreamer(MCStreamer &S) : MCTargetStreamer(S) {}
-DMGTargetStreamer::~DMGTargetStreamer() = default;
+// TODO: Create DMGMCInstrAnalysis class?
 
-static MCTargetStreamer *createTargetAsmStreamer(MCStreamer &S,
-                                                 formatted_raw_ostream &OS,
-                                                 MCInstPrinter *InstPrint,
-                                                 bool isVerboseAsm) {
-  return new DMGTargetStreamer(S);
-}
-
-// Force static initialization.
 extern "C" LLVM_EXTERNAL_VISIBILITY void LLVMInitializeDMGTargetMC() {
-  // Register the MC asm info.
-  Target &TheDMGTarget = getTheDMGTarget();
-  RegisterMCAsmInfoFn X(TheDMGTarget, createDMGMCAsmInfo);
+  for (Target *T : {&getTheDMGTarget()}) {
+    RegisterMCAsmInfo<DMGMCAsmInfo> X(*T);
+    TargetRegistry::RegisterMCInstrInfo(*T, createDMGMCInstrInfo);
+    TargetRegistry::RegisterMCRegInfo(*T, createDMGMCRegisterInfo);
+    TargetRegistry::RegisterMCSubtargetInfo(*T, createDMGMCSubtargetInfo);
+    TargetRegistry::RegisterELFStreamer(*T, createDMGMCStreamer);
+    TargetRegistry::RegisterMCInstPrinter(*T, createDMGMCInstPrinter);
+    // InstructionAnalyzer goes here
+  }
 
-  // Register the MC instruction info.
-  TargetRegistry::RegisterMCInstrInfo(TheDMGTarget, createDMGMCInstrInfo);
+  // TODO: MCCodeEmitter, AsmBackend
+  // TargetRegistry::RegisterMCCodeEmitter(getTheDMGTarget(), createDMGMCCodeEmitter);
+  // TargetRegistry::RegisterMCAsmBackend(getTheDMGTarget(), createDMGAsmBackend);
 
-  // Register the MC register info.
-  TargetRegistry::RegisterMCRegInfo(TheDMGTarget, createDMGMCRegisterInfo);
-
-  // Register the MC subtarget info.
-  TargetRegistry::RegisterMCSubtargetInfo(TheDMGTarget,
-                                          createDMGMCSubtargetInfo);
-
-  // Register the MCInstPrinter
-  TargetRegistry::RegisterMCInstPrinter(TheDMGTarget, createDMGMCInstPrinter);
-
-  TargetRegistry::RegisterAsmTargetStreamer(TheDMGTarget,
-                                            createTargetAsmStreamer);
 }
