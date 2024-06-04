@@ -234,6 +234,7 @@ StringRef Triple::getArchTypePrefix(ArchType Kind) {
   case dxil:        return "dx";
 
   case xtensa:      return "xtensa";
+  case dmg:         return "dmg";
   }
 }
 
@@ -457,6 +458,7 @@ Triple::ArchType Triple::getArchTypeForLLVMName(StringRef Name) {
     .Case("loongarch64", loongarch64)
     .Case("dxil", dxil)
     .Case("xtensa", xtensa)
+    .Case("dmg", dmg)
     .Default(UnknownArch);
 }
 
@@ -604,7 +606,7 @@ static Triple::ArchType parseArch(StringRef ArchName) {
           .Cases("dxil", "dxilv1.0", "dxilv1.1", "dxilv1.2", "dxilv1.3",
                  "dxilv1.4", "dxilv1.5", "dxilv1.6", "dxilv1.7", "dxilv1.8",
                  Triple::dxil)
-          .Cases("dmg", "DMG", "GameBoy", "Game Boy", Triple::dmg)
+          .Cases("dmg", "DMG", "GameBoy", Triple::dmg)
           .Case("xtensa", Triple::xtensa)
           .Default(Triple::UnknownArch);
 
@@ -1849,6 +1851,7 @@ Triple Triple::getBigEndianArchVariant() const {
   case Triple::amdil64:
   case Triple::amdil:
   case Triple::avr:
+  case Triple::dmg:
   case Triple::dxil:
   case Triple::hexagon:
   case Triple::hsail64:
@@ -1954,6 +1957,7 @@ bool Triple::isLittleEndian() const {
   case Triple::avr:
   case Triple::bpfel:
   case Triple::csky:
+  case Triple::dmg:
   case Triple::dxil:
   case Triple::hexagon:
   case Triple::hsail64:
